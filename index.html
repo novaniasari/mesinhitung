@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <title>Jhoni Eka Putra</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+  <style>
+   /* following three (cascaded) are equivalent to above three meta viewport statements */
+   			            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+   			            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+   			                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+   			                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+   			                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+  </style>
+
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" type="text/css" href="index_main.less.css" class="main-less">
+  <!--<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+  <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+  <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+  <!-- Recommended location for your JavaScript libraries -->
+  <!-- These library references (below) are just examples to give you the general idea... -->
+  <!-- <script src="lib/mc/hammer.js"></script> -->
+  <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+  <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+  <script src="cordova.js" id="xdkJScordova_"></script>
+
+  <script src="number.js"></script>
+  <script src="app.js"></script>
+  <!-- for your event code, see README and file comments for details -->
+  <script src="init-app.js"></script>
+  <!-- for your init code, see README and file comments for details -->
+  <script src="init-dev.js"></script>
+  <!-- normalizes device and document ready events, see file for details -->
+  <script src="jquery-2.1.4.min.js"></script>
+  <script src="material.min.js"></script>
+
+  <script type="application/javascript" src="jquery.min.js"></script>
+  <script type="application/javascript" src="index_user_scripts.js"></script>
+
+  <script>
+   function tambah(){
+            var nil1 = document.getElementById('nilai_1').value;
+            var nil2 = document.getElementById('nilai_2').value;
+            
+            var c = 0
+            nil1 = parseFloat(nil1);
+            nil2 = parseFloat(nil2);
+            
+            c = nil1 + nil2;
+            
+            document.getElementById('hasil').value = c;
+        }
+            
+            function kurang(){
+            var nil1 = document.getElementById('nilai_1').value;
+            var nil2 = document.getElementById('nilai_2').value;
+            
+            var c = 0
+            nil1 = parseFloat(nil1);
+            nil2 = parseFloat(nil2);
+            
+            c = nil1 - nil2;
+            
+            document.getElementById('hasil').value = c;
+        }
+            function kali(){
+            var nil1 = document.getElementById('nilai_1').value;
+            var nil2 = document.getElementById('nilai_2').value;
+            
+            var c = 0
+            nil1 = parseFloat(nil1);
+            nil2 = parseFloat(nil2);
+            
+            c = nil1 * nil2;
+            
+            document.getElementById('hasil').value = c;
+        }
+            function mod(){
+            var nil1 = document.getElementById('nilai_1').value;
+            var nil2 = document.getElementById('nilai_2').value;
+            
+            var c = 0
+            nil1 = parseFloat(nil1);
+            nil2 = parseFloat(nil2);
+            
+            c = nil1 % nil2;
+            
+            document.getElementById('hasil').value = c;
+        }
+            function pangkat(){
+            var nil1 = document.getElementById('nilai_1').value;
+            var nil2 = document.getElementById('nilai_2').value;
+            
+            var c = 0
+            nil1 = parseFloat(nil1);
+            nil2 = parseFloat(nil2);
+            
+            c = nil1;
+                for (var i = 1; i < nil2; i++){
+                    c = c * nil1;
+                }
+            
+            document.getElementById('hasil').value = c;
+        }
+            function kosong(){
+             nil1 = "";
+            nil2 = "";
+            c = "";
+            document.getElementById('nilai_1').value = nil1;
+            document.getElementById('nilai_2').value = nil2;
+            document.getElementById('hasil').value = c;
+        }
+             function bagi(){
+            var nil1 = document.getElementById('nilai_1').value;
+            var nil2 = document.getElementById('nilai_2').value;
+            
+            var c = 0
+            nil1 = parseFloat(nil1);
+            nil2 = parseFloat(nil2);
+            
+            c = nil1 / nil2;
+            
+            document.getElementById('hasil').value = c;
+        }
+  </script>
+ </head>
+
+ <body>
+  <div class="upage vertical-col left" id="mainpage">
+   <table class="table">
+    <tbody>
+     <tr>
+      <td>
+       <dd>
+        <label class="narrow-control label-inline=" for="nama">&nbsp; Angka 1 :</label>
+       </dd>
+      </td>
+      <td>
+       <dd>
+        <input onkeypress="returnnumbersonly(this, event)" class="form-control default" id="nilai_1">
+       </dd>
+      </td>
+     </tr>
+     <tr>
+      <td>&nbsp;</td>
+     </tr>
+
+     <tr>
+      <td>
+       <dd>
+        <label class="narrow-control label-inline=" for="nama">&nbsp; Angka 2 :</label>
+       </dd>
+      </td>
+      <td>
+       <dd>
+        <input onkeypress="returnnumbersonly(this, event)" class="form-control default" id="nilai_2">
+       </dd>
+      </td>
+     </tr>
+     <tr>
+      <td>&nbsp;</td>
+     </tr>
+
+    </tbody>
+
+   </table>
+
+   <center>
+    <input class="btn widget uib_w_4 btn-success" type="submit" value="&nbsp;+&nbsp;" onclick="tambah();">
+    <input class="btn widget uib_w_5 btn-success" type="submit" value="&nbsp;-&nbsp;" onclick="kurang();">
+    <input class="btn widget uib_w_6 btn-success" type="submit" value="&nbsp;/&nbsp;" onclick="bagi();">
+    <input class="btn widget uib_w_7 btn-success" type="submit" value="&nbsp;X&nbsp;" onclick="kali();">
+    <input class="btn widget uib_w_8 btn-success" type="submit" value="&nbsp;Mod&nbsp;" onclick="mod();">
+    <input class="btn widget uib_w_9 btn-success" type="submit" value="&nbsp;^&nbsp;" onclick="pangkat();">
+    <input class="btn widget uib_w_10 btn-success" type="submit" value="&nbsp;C&nbsp;" onclick="kosong();">
+
+   </center>
+   <table class="table">
+    <tbody>
+     <tr>
+      <td>
+       <dd>
+        <label class="narrow-control label-inline=" for="nama">&nbsp; Hasil</label>
+       </dd>
+      </td>
+      <td>
+       <dd>
+        <input onkeypress="returnnumbersonly(this, event)" class="form-control default" id="hasil">
+       </dd>
+      </td>
+     </tr>
+     <tr>
+      <td>&nbsp;</td>
+     </tr>
+
+    </tbody>
+
+   </table>
+  </div>
+  <div class="upage vertical-col left hidden" id="uib_page_1"></div>
+ </body>
+
+</html>
